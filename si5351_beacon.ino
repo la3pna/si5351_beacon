@@ -21,7 +21,7 @@ char message[ ] = "LA3PNA LA3PNA LA3PNA JO59BR JO59BR // SI5351 BEACON // "; // 
 
 int calvalue = 14;// here you set the cal value for the TCXO
 
-unsigned long int frequency =5010000 ; // here you set the beacon nominal frequency
+unsigned long int frequency =501000000 ; // here you set the beacon nominal frequency
 
 long tonetime = 32000; // Here you set the continuous tone time.
 
