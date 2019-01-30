@@ -145,12 +145,11 @@ void setup() {
   pinMode(LEDpin, OUTPUT) ;
   Serial.begin(9600) ;
   Serial.println("Si5351 beacon initiated") ;
-  si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0);
+  si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, calvalue);
   si5351.drive_strength(SI5351_CLK0, SI5351_DRIVE_2MA);
-  si5351.set_correction(calvalue);
   si5351.output_enable(SI5351_CLK0, 0);
   si5351.set_pll(12ULL*frequency, SI5351_PLLA);
-  si5351.set_freq(frequency*100ULL, 12ULL*frequency, SI5351_CLK0);
+  si5351.set_freq(frequency*100ULL, SI5351_CLK0);
   delay(2000);
 }
 
